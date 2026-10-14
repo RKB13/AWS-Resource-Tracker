@@ -1,5 +1,5 @@
 # AWS-Resource-Tracker
-Basic bash scripting project that helps monitor AWS resources for cloud cost effectiveness. By automating the reporting of AWS resources, organizations can avoid unnecessary costs associated with unused services.
+Basic bash scripting project that helps monitor AWS resources for cloud cost effectiveness. By automating the reporting of AWS resources, organizations can avoid unnecessary costs associated with unused or not needed services.
 
 ## Overview
 
@@ -103,6 +103,16 @@ If you press `⌃C` to exit it will forcefully quit and not restore the terminal
 This leaves your terminal stuck in a state where "echoing" (the setting that prints the letters you type onto the screen) is turned off.
 
 To fix this type the command `stty echo` to fix your terminal.
+
+**Problem 2:**
+
+As mentioned before `aws ec2 describe-instances` handles large outputs.
+
+in order to reduce the size and keep only the necessary information we piped the output of `aws ec2 describe-instances` into `JQ` (a lightweight, command-line tool used to parse, filter, slice, and transform JSON data). 
+
+```bash
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+```
 
 
 ## Disclaimer
