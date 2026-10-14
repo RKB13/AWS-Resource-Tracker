@@ -40,7 +40,7 @@ Before running the script, ensure you have:
 
 1. Copy this Bash script:
 
-   ```bash
+```bash
    #!/bin/bash
 ###########
 # Author: Rikki
@@ -73,7 +73,7 @@ aws lambda list-functions
 #list IAM users
 echo "print list of IAM users"
 aws iam list-users
-   ```
+```
 
 2. Make the script executable:
 
