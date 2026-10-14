@@ -90,9 +90,9 @@ Before running the script, ensure you have:
 
 **Problem 1:**
 
-```aws ec2 describe-instances``` handles large outputs.
+`aws ec2 describe-instances` handles large outputs.
 
-By default the AWS CLI sends large text outputs to a "pager" (usually a program called ```less```).
+By default the AWS CLI sends large text outputs to a "pager" (usually a program called ``less```).
 
 In order to display the text nicely,  ```less``` changes how your terminal behaves behind the scenes.
 
