@@ -82,7 +82,7 @@ aws iam list-users
    or 
 
    ```bash
-   chmod 700 was-resource-tracker.sh
+   chmod 700 aws-resource-tracker.sh
    ```
 
 3. Run the script:
@@ -110,7 +110,7 @@ aws iam list-users
 - Processing JSON data with JQ.
 - How to enforce strict error handling using Bash's `set -eo pipefail` command.
 - Scheduling automated tasks with Linux Cron.
-- Understanding how resource visibility can contribute to cloud cost optimisation. (e.g help identify Terraform drift)
+- Understanding how resource visibility can contribute to cloud cost optimisation (e.g help identify Terraform drift).
 
 ## Future Improvements !!!!!FIX THIS(add future projects such as terraform drift detector, AI cloud cost Detective) !!!!!
 
@@ -120,7 +120,7 @@ aws iam list-users
 - Send automated reports via email.
 - Extend resource tracking to additional AWS services.
 
-## issues I ran into & how to fix them!
+## Issues I ran into & how to fix them!
 
 **Problem 1:**
 
@@ -142,7 +142,7 @@ To fix this type the command `stty echo` to fix your terminal.
 
 As mentioned before `aws ec2 describe-instances` handles large outputs.
 
-in order to reduce the size and keep only the necessary information we piped the output of `aws ec2 describe-instances` into `JQ` (a lightweight, command-line tool used to parse, filter, slice, and transform JSON data). 
+In order to reduce the size and keep only the necessary information we piped the output of `aws ec2 describe-instances` into `JQ` (a lightweight, command-line tool used to parse, filter, slice, and transform JSON data). 
 
 ```bash
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
