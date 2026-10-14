@@ -79,11 +79,11 @@ aws iam list-users
    ```bash
    chmod u+x aws-resource-tracker.sh
    ```
-or 
+   or 
 
-```bash
-chmod 700 was-resource-tracker.sh
-```
+   ```bash
+   chmod 700 was-resource-tracker.sh
+   ```
 
 3. Run the script:
 
