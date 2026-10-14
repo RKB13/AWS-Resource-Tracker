@@ -24,7 +24,6 @@ This project explores how shell scripting can help DevOps engineers monitor clou
 - Retrieves Lambda functions.
 - Lists IAM users.
 - Uses JQ to reduce clutter & extract relevant information from AWS CLI output.
-- Enforce strict error handling using Bash's `set -eo pipefail` command.
 - Can be scheduled to run automatically using Linux Cron jobs.
 
 ## Prerequisites
@@ -41,7 +40,7 @@ Before running the script, ensure you have:
 1. Copy this Bash script:
 
 ```bash
-   #!/bin/bash
+#!/bin/bash
 ###########
 # Author: Rikki
 # Date: 14/10/26
@@ -109,11 +108,11 @@ chmod 700 was-resource-tracker.sh
 - Using Bash to automate repetitive tasks.
 - Retrieving AWS infrastructure information through the AWS CLI.
 - Processing JSON data with JQ.
-- Debugging shell scripts using `set -x`.
+- How to enforce strict error handling using Bash's `set -eo pipefail` command.
 - Scheduling automated tasks with Linux Cron.
-- Understanding how resource visibility can contribute to cloud cost optimisation.
+- Understanding how resource visibility can contribute to cloud cost optimisation. (e.g help identify Terraform drift)
 
-## Future Improvements
+## Future Improvements !!!!!FIX THIS(add future projects such as terraform drift detector, AI cloud cost Detective) !!!!!
 
 - Identify resources that may be unused or underutilised.
 - Generate timestamped reports and store them for historical comparison.
