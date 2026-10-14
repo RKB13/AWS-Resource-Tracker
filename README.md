@@ -5,7 +5,7 @@ Basic bash scripting project that helps monitor AWS resources for cloud cost eff
 
 A Bash-based AWS Resource Tracker that automates the reporting of AWS resources using the AWS CLI.
 
-The script retrieves information about EC2 instances, S3 buckets, Lambda functions, and IAM users, providing a simple overview of the resources within an AWS account.
+The script retrieves information about S3 buckets, EC2 instances, Lambda functions, and IAM users, providing a simple overview of the resources within an AWS account.
 
 This project explores how shell scripting can help DevOps engineers monitor cloud infrastructure, identify potentially unused resources, and improve cost efficiency.
 
@@ -19,12 +19,12 @@ This project explores how shell scripting can help DevOps engineers monitor clou
 
 ## Features
 
-- Retrieves a list of EC2 instances.
 - Lists S3 buckets.
+- Retrieves a list of EC2 instances.
 - Retrieves Lambda functions.
 - Lists IAM users.
-- Uses JQ to extract relevant information from AWS CLI output.
-- Supports debugging using Bash's `set -x` option.
+- Uses JQ to reduce clutter & extract relevant information from AWS CLI output.
+- Enforce strict error handling using Bash's `set -eo pipefail` command.
 - Can be scheduled to run automatically using Linux Cron jobs.
 
 ## Prerequisites
