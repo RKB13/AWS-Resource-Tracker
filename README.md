@@ -92,17 +92,17 @@ Before running the script, ensure you have:
 
 `aws ec2 describe-instances` handles large outputs.
 
-By default the AWS CLI sends large text outputs to a "pager" (usually a program called ``less```).
+By default the AWS CLI sends large text outputs to a "pager" (usually a program called `less`).
 
-In order to display the text nicely,  ```less``` changes how your terminal behaves behind the scenes.
+In order to display the text nicely,  `less` changes how your terminal behaves behind the scenes.
 
-Press ```q``` and the program closes cleanly and restores your terminal back to its normal settings.
+Press `q` and the program closes cleanly and restores your terminal back to its normal settings.
 
-If you press ```⌃C``` to exit it will forcefully quit and not restore the terminal to its original settings.
+If you press `⌃C` to exit it will forcefully quit and not restore the terminal to its original settings.
 
 This leaves your terminal stuck in a state where "echoing" (the setting that prints the letters you type onto the screen) is turned off.
 
-To fix this type the command ```stty echo``` to fix your terminal 
+To fix this type the command `stty echo` to fix your terminal.
 
 
 ## Disclaimer
