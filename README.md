@@ -38,18 +38,53 @@ Before running the script, ensure you have:
 
 ## Usage
 
-1. Clone this repository:
+1. Copy this Bash script:
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   #!/bin/bash
+###########
+# Author: Rikki
+# Date: 14/10/26
+#
+# version: v1
+#
+# This script will report the usage of AWS resources
+###########
+
+set -eo pipefail
+
+#AWS S3
+#AWS EC2
+#AWS Lambda
+#AWS IAM Users
+
+#List S3 buckets
+echo "print list of s3 buckets"
+aws s3 ls
+
+#list EC2 Instances
+echo "print list of ec2 buckets"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+#list Lambda
+echo "print list of lambda functions"
+aws lambda list-functions
+
+#list IAM users
+echo "print list of IAM users"
+aws iam list-users
    ```
 
 2. Make the script executable:
 
    ```bash
-   chmod +x aws_resource_tracker.sh
+   chmod u+x aws-resource-tracker.sh
    ```
+or 
+
+```bash
+chmod 700 was-resource-tracker.sh
+```
 
 3. Run the script:
 
@@ -63,7 +98,7 @@ Before running the script, ensure you have:
    crontab -e
    ```
 
-   Example: run the script every day at 9:00 AM.
+   Example: run the script every day at 18:00 PM.
 
    ```cron
    0 18 * * * /path/to/aws_resource_tracker.sh
