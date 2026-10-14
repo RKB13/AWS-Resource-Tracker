@@ -66,7 +66,7 @@ Before running the script, ensure you have:
    Example: run the script every day at 9:00 AM.
 
    ```cron
-   0 9 * * * /path/to/aws_resource_tracker.sh
+   0 18 * * * /path/to/aws_resource_tracker.sh
    ```
 
 ## What I Learned
