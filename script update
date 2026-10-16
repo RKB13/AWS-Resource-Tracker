@@ -11,10 +11,10 @@
 set -eo pipefail
 
 #adding daily report 
-DATE=$(date +%y-%M-%d)
+DATE=$(date +%d-%m-%y)
 
 #define the report directory
-REPORT_DIR="$(dirname "$0")/reports"
+REPORT_DIR="$(dirname "$0")"
 
 # Define the report file
 REPORT_FILE="$REPORT_DIR/aws-resource-tracker.log"
@@ -27,7 +27,6 @@ echo "=================================="
 echo "AWS Resource Tracker"
 echo "Report Date: $DATE"
 echo "=================================="
-
 #AWS S3
 #AWS EC2
 #AWS Lambda
@@ -35,23 +34,23 @@ echo "=================================="
 
 #List S3 buckets
 echo "print list of s3 buckets"
-echo "----------------------------"
-ws s3 ls
+aws s3 ls
+echo "::::::::::::::::::::::::::::::::"
 
 #list EC2 Instances
 echo "print list of ec2 buckets"
-echo "----------------------------"
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+echo ":::::::::::::::::::::::::::::::::"
 
 #list Lambda
 echo "print list of lambda functions"
-echo "----------------------------"
 aws lambda list-functions
+echo ":::::::::::::::::::::::::::::::::"
 
 #list IAM users
 echo "print list of IAM users"
-echo "----------------------------"
 aws iam list-users
+echo ":::::::::::::::::::::::::::::::::"
 
 echo "report complete"
 
