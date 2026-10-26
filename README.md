@@ -117,6 +117,7 @@ REPORT_FILE="$REPORT_DIR/aws-resource-tracker.log"
 # Redirect all output and errors to the report file
 exec > "$REPORT_FILE" 2>&1
 ```
+look at the [most recent version of script] (aws-resource-tracker-v2.sh) for full view.
 
 ## What I Learned
 
