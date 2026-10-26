@@ -102,6 +102,21 @@ aws iam list-users
    ```cron
    0 18 * * * /path/to/aws_resource_tracker.sh
    ```
+5. Use the following commands to send the output to the aws-resource-tracker.log file, along with the date.
+
+```bash
+#adding daily report 
+DATE=$(date +%d-%m-%y)
+
+#define the report directory
+REPORT_DIR="$(dirname "$0")"
+
+# Define the report file
+REPORT_FILE="$REPORT_DIR/aws-resource-tracker.log"
+
+# Redirect all output and errors to the report file
+exec > "$REPORT_FILE" 2>&1
+```
 
 ## What I Learned
 
