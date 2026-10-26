@@ -102,7 +102,7 @@ aws iam list-users
    ```cron
    0 18 * * * /path/to/aws_resource_tracker.sh
    ```
-5. Use the following commands to send the output to the aws-resource-tracker.log file, along with the date.
+EXTRA. Insert the following commands below `set -eo pipefail` to send the output to the aws-resource-tracker.log file, along with the date.
 
 ```bash
 #adding daily report 
